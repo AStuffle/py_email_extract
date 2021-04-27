@@ -11,7 +11,7 @@ messages = inbox.Items
 message = messages.GetFirst()
 
 # Attachment save location. Needs to exist already.
-filepath = 'C:\\Users\\andrews.BROWN\\OneDrive - Brown Distributing Company, LTD\\NAA\\IRI Reports\\Exports'
+filepath = '[PUT_FILEPATH_HERE]'
 
 for m in messages:
     print (message)
