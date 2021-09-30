@@ -1,17 +1,17 @@
+# pip install pywin32
+
 import win32com.client
 import os
 
 outlook = win32com.client.Dispatch("Outlook.Application").GetNamespace("MAPI")
 
 # Target the folder you want to pull from. Use the get_outlook_folders script to get a complete list and re-target as needed.
-inbox = outlook.GetDefaultFolder(6).Folders[15]
-
-# 
+inbox = outlook.GetDefaultFolder(6).Folders[8]
 messages = inbox.Items
 message = messages.GetFirst()
 
 # Attachment save location. Needs to exist already.
-filepath = '[PUT_FILEPATH_HERE]'
+filepath = r"[FILEPATH]"
 
 for m in messages:
     print (message)
@@ -21,6 +21,6 @@ for m in messages:
     
     # Comment this out until you're sure you know what is going to get pulled!
     # This will currently pull the first attachment from every email in the target folder!
-    #attachment.SaveASFile(os.path.join(filepath,attachment.FileName))
+    attachment.SaveASFile(os.path.join(filepath,attachment.FileName))
     
     message = messages.GetNext()
