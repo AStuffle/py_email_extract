@@ -1,5 +1,6 @@
 # This script can be used to get folder object references from outlook.
 # Run it from cmd or shell.
+# install pywin32
 
 import win32com.client
 import os
